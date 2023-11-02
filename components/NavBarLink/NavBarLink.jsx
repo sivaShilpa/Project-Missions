@@ -1,28 +1,19 @@
 import React from 'react'
 import { Grid, Box, Link, Typography, Divider } from '@mui/material'
-import StyledBox from '../../styles/Header/StyledBox'
-import StyledTypography from '../../styles/Header/StyledTypography'
-import StyledLink from '../../styles/Header/StyledLink'
-import StyledGrid from '../../styles/Header/StyledGrid'
-import StyledNavBox from '../../styles/Header/StyledNavBox'
+import headerStyles from '../../styles/Header/styles'
 
-const NavBarLink = ({icon, text}) => {
-  return (
-    <Grid item>
-        <StyledBox>
-            <StyledLink href="/missions" sx={{textDecoration:'none'}}>
-                <StyledGrid container spacing={0.5}>
-                    <Grid item>{icon}</Grid>
-                    <Grid item>
-                        <StyledNavBox display={'flex'} justifyContent={'space-between'}>                                        
-                            <StyledTypography>{text}</StyledTypography> 
-                        </StyledNavBox>  
-                    </Grid>
-                </StyledGrid>                                                             
-            </StyledLink>                            
-        </StyledBox>                                
-    </Grid>
-  )
+const NavBarLink = ({ text, link, icon }) => {
+    return (
+        <Grid container sx={{ ...headerStyles.navbarItem }}>
+            <Grid item id='icon'>{icon}</Grid>
+            <Grid item id='text'>
+                <Link href={link} sx={{'textDecoration':'none'}}>
+                    <Typography sx={{...headerStyles.navBarText}}>{text}</Typography>
+                    <Box></Box>
+                </Link>
+            </Grid>
+        </Grid>
+    )
 }
 
 export default NavBarLink

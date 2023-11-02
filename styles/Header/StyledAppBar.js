@@ -7,7 +7,6 @@ const StyledAppBar = styled(AppBar)({
     alignItems: 'center',
     background: 'var(--dark-dark-2, #1F222A)',
     boxShadow: 'none',
-
     height:'85px',    
     padding: '0 40px',
 })
