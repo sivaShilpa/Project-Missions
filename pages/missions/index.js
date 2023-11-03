@@ -7,11 +7,14 @@ import ICONS from '../../components/icons/icons'
 const Missions = () => {
     return (
         <Grid sx={{ ...missionsStyles.main }}>
-            <Card sx={{ width: '100%', background: 'black' }}>
-                <CardMedia src={ICONS.featuredQuest} />
+            <Card item sx={{ width:'100%', borderRadius:'10px', boxShadow:'none', height:'12.4%' }}>
+                <Image src={ICONS.featuredQuest} width={1789} height={244}/>               
             </Card>
         </Grid>
     )
 }
 
 export default Missions
+
+// sx={{}}
+// component='Image'
