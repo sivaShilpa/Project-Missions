@@ -5,7 +5,7 @@ import Header from '../templates/Header'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Header/>
+      <Header />
       <Component {...pageProps} />
     </>
   )

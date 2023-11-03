@@ -1,7 +1,7 @@
 import ICONS from "../components/icons/icons";
 import ROUTES from "../routes/routes";
 
-const CONSTANTS ={
+const CONSTANTS = {
   navbarPages: [
     {
       text: 'Missions',
@@ -19,6 +19,6 @@ const CONSTANTS ={
       icon: ICONS.rewardsicon,
     }
   ],
-} 
+}
 
 export default CONSTANTS

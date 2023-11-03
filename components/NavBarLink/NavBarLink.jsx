@@ -1,18 +1,21 @@
+'use client'
 import React from 'react'
-import { Grid, Box, Link, Typography, Divider } from '@mui/material'
+import { Box, Link, Typography } from '@mui/material'
 import headerStyles from '../../styles/Header/styles'
+import { usePathname } from 'next/navigation'
 
 const NavBarLink = ({ text, link, icon }) => {
+    const pathname = usePathname()
     return (
-        <Grid container sx={{ ...headerStyles.navbarItem }}>
-            <Grid item id='icon'>{icon}</Grid>
-            <Grid item id='text'>
-                <Link href={link} sx={{'textDecoration':'none'}}>
-                    <Typography sx={{...headerStyles.navBarText}}>{text}</Typography>
-                    <Box></Box>
+        <Box sx={{ ...headerStyles.navbarItem }}>
+            <Box>{icon}</Box>
+            <Box id='text' sx={pathname == link ? { ...headerStyles.linkTextWrapActive } : { ...headerStyles.linkTextWrap }}>
+                <Link href={link} sx={{ 'textDecoration': 'none' }}>
+                    <Typography id='linkText' sx={{ ...headerStyles.navBarText }}>{text}</Typography>
                 </Link>
-            </Grid>
-        </Grid>
+                <Box id='linkTextLine'></Box>
+            </Box>
+        </Box>
     )
 }
 

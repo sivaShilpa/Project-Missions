@@ -5,11 +5,14 @@ const headerStyles = {
         item: true,
         container: true,
         xs: 'auto',
-        display:'flex',
-        flexDirection:'row',
-        justifyContent: 'space-between',
-        width: '30%',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'left',
+        justifyContent: 'space-around',
+        width: '23%',
+        height: '84px'
     },
+
     appbarStyles: {
         position: 'sticky',
         justifyContent: 'center',
@@ -23,25 +26,77 @@ const headerStyles = {
         container: true,
         // xs: 'auto',
         width: '100%',
-        display:'flex',
-        flexDirection:'row',
+        height: '84px',
+        display: 'flex',
+        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',        
+        justifyContent: 'space-between',
     },
     navbarItem: {
         display: 'flex',
-        flexDirection: 'row',
-        gap: 0.5,
-        alignItems: 'center',        
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        position: 'relative'
     },
-    navBarText:{
-        color:headerTheme.palette.secondary,
-        textDecoration:'none',
+    navBarText: {
+        color: headerTheme.palette.secondary,
+        textDecoration: 'none',
         fontSize: '20px',
         fontStyle: 'normal',
-        fontWeight: '700',
-        lineHeight: '160%' 
+        fontWeight: 700,
+        paddingTop: '28px',
+    },
+    linkTextWrap: {
+        height: '84px',
+        justifyContent: 'space-between',
+        alignItems: 'left',
+        display: 'flex',
+        flexDirection: 'column',
+        '#linkTextLine': {
+            width: '110%',
+            height: '4px',
+            flexShrink: '0',
+            borderRadius: '2px 2px 0px 0px',
+            background: headerTheme.palette.primary,
+        },
+        ':hover': {
+            '#linkText': {
+                background: headerTheme.palette.highlight,
+                backgrounClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+            },
+            '#linkTextLine': {
+                background: headerTheme.palette.highlight
+            }
+        }
+    },
+    linkTextWrapActive: {
+        height: '84px',
+        justifyContent: 'space-between',
+        alignItems: 'left',
+        display: 'flex',
+        flexDirection: 'column',
+        '#linkText': {
+            textDecoration: 'none',
+            fontSize: '20px',
+            fontStyle: 'normal',
+            fontWeight: 700,
+            paddingTop: '28px',
+            background: headerTheme.palette.highlight,
+            backgrounClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+        },
+        '#linkTextLine': {
+            width: '110%',
+            height: '4px',
+            flexShrink: '0',
+            borderRadius: '2px 2px 0px 0px',
+            background: headerTheme.palette.highlight
+        }
     }
+
 };
 
 export default headerStyles;
