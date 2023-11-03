@@ -95,6 +95,28 @@ const headerStyles = {
             borderRadius: '2px 2px 0px 0px',
             background: headerTheme.palette.highlight
         }
+    },
+    sideBar:{
+        item: true,
+        container: true,
+        xs:'auto',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginRight: '10px',
+        width: '20%',
+        color: headerTheme.palette.white,
+    },
+    sideButton:{
+        display: 'flex',
+        padding: '2px 16px',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        gap: '8px',
+        borderRadius: '40px',
+        border: '2px solid',
+        height: '85px'   
     }
 
 };

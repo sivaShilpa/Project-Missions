@@ -2,11 +2,13 @@
 import React from 'react'
 import { AppBar, Grid, Link } from '@mui/material'
 import Image from 'next/image'
-import NavBarLink from '../../components/NavBarLink'
+import NavBarLink from './NavBarLink'
+import SideButton from './SideButton/SideButton'
 import headerStyles from '../../styles/Header/styles'
 import ICONS from '../../components/icons/icons'
-import CONSTANTS from '../../constants/constants'
+import CONSTANTS from '../../constants/Header/constants'
 import ROUTES from '../../routes/routes'
+
 const Header = () => {
     return (
         <AppBar sx={{ ...headerStyles.appbarStyles }}>
@@ -21,8 +23,10 @@ const Header = () => {
                         <NavBarLink {...el} />
                     )}
                 </Grid>
-                <Grid item>
-                    3rd item
+                <Grid sx={{ ...headerStyles.sideBar }}>
+                    {CONSTANTS.buttons.map(el =>
+                        <SideButton {...el} />                        
+                    )}
                 </Grid>
             </Grid>
         </AppBar>

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Box, Link, Typography } from '@mui/material'
-import headerStyles from '../../styles/Header/styles'
+import headerStyles from '../../../styles/Header/styles'
 import { usePathname } from 'next/navigation'
 
 const NavBarLink = ({ text, link, icon }) => {
