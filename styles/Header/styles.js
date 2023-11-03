@@ -24,7 +24,6 @@ const headerStyles = {
     },
     appbarGridContainer: {
         container: true,
-        // xs: 'auto',
         width: '100%',
         height: '84px',
         display: 'flex',
@@ -96,27 +95,33 @@ const headerStyles = {
             background: headerTheme.palette.highlight
         }
     },
-    sideBar:{
+    sideBar: {
         item: true,
         container: true,
-        xs:'auto',
+        xs: 'auto',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        gap: 2,        
+        gap: 2,
     },
-    sideButton:{
+    sideButton: {
+        container: true,
+        item: true,
+        xs: 'auto',
         display: 'flex',
         padding: '2px 16px',
         justifyContent: 'space-between',
         alignItems: 'center',
         gap: '8px',
         borderRadius: '40px',
-        border: '2px solid grey',
+        border: '2px solid',
         height: '36px',
-        width:'140px',
-        color: headerTheme.palette.white,   
+        fontSize: '20px',
+        fontStyle: 'normal',
+        fontWeight: 700,
+        lineHeight: '160%',
+        color: headerTheme.palette.white,
     }
 
 };

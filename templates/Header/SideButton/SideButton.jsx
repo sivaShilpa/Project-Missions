@@ -1,13 +1,14 @@
-import { Grid } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
-import headerStyles from '../../../styles/Header/styles' 
+import headerStyles from '../../../styles/Header/styles'
+import Image from 'next/image'
 
-const SideButton = ({icon, number, background, borderColor}) => {
+const SideButton = ({ icon, number, background, borderColor }) => {
   return (
-    <Grid container item sx={{...headerStyles.sideButton, backgroundColor:{background}, borderColor:{borderColor}}}>
-        <Grid item>{icon}</Grid>
-        <Grid item>{number}</Grid>
-    </Grid>
+    <Box sx={{ ...headerStyles.sideButton, background: background, borderColor: borderColor }}>
+      <Image src={icon} alt="icon" />
+      <Box sx={{}}>{number}</Box>
+    </Box>
   )
 }
 

@@ -1,6 +1,6 @@
-'use client'
+
 import React from 'react'
-import { AppBar, Grid, Link } from '@mui/material'
+import { AppBar, Grid, Link, Box } from '@mui/material'
 import Image from 'next/image'
 import NavBarLink from './NavBarLink'
 import SideButton from './SideButton/SideButton'
@@ -24,12 +24,12 @@ const Header = () => {
                         <NavBarLink {...el} />
                     )}
                 </Grid>
-                <Grid sx={{ ...headerStyles.sideBar }}>
+                <Box sx={{ ...headerStyles.sideBar }}>
                     {CONSTANTS.buttons.map(el =>
-                        <SideButton />
+                        <SideButton {...el} />
                     )}
                     <Avatar />
-                </Grid>
+                </Box>
             </Grid>
         </AppBar>
     )
