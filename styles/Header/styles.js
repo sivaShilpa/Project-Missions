@@ -104,9 +104,7 @@ const headerStyles = {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginRight: '10px',
-        width: '20%',
-        color: headerTheme.palette.white,
+        gap: 2,        
     },
     sideButton:{
         display: 'flex',
@@ -115,8 +113,10 @@ const headerStyles = {
         alignItems: 'center',
         gap: '8px',
         borderRadius: '40px',
-        border: '2px solid',
-        height: '85px'   
+        border: '2px solid grey',
+        height: '36px',
+        width:'140px',
+        color: headerTheme.palette.white,   
     }
 
 };

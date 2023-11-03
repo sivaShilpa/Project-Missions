@@ -8,6 +8,7 @@ import headerStyles from '../../styles/Header/styles'
 import ICONS from '../../components/icons/icons'
 import CONSTANTS from '../../constants/Header/constants'
 import ROUTES from '../../routes/routes'
+import Avatar from './Avatar/Avatar'
 
 const Header = () => {
     return (
@@ -25,8 +26,9 @@ const Header = () => {
                 </Grid>
                 <Grid sx={{ ...headerStyles.sideBar }}>
                     {CONSTANTS.buttons.map(el =>
-                        <SideButton {...el} />                        
+                        <SideButton />
                     )}
+                    <Avatar />
                 </Grid>
             </Grid>
         </AppBar>
