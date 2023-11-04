@@ -4,6 +4,8 @@ import coinGold from "../../assets/coinGold.png"
 import avatar from '../../assets/avatar.png'
 import status from '../../assets/statusOnline.png'
 import featuredQuest from '../../assets/featuredQuest.png'
+import group from '../../assets/Group.png'
+import cardHeader from '../../assets/cardHeader.png'
 
 const ICONS = {
   homeLogo: homeLogo,
@@ -15,6 +17,8 @@ const ICONS = {
   avataricon: avatar,
   statusOnlineicon: status,
   featuredQuest: featuredQuest,
+  groupicon: group,
+  cardHeader: cardHeader,
 }
 export default ICONS
 
