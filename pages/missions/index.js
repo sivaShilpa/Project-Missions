@@ -4,16 +4,17 @@ import React from 'react'
 import missionsStyles from '../../styles/Missions/styles'
 import ICONS from '../../components/icons/icons'
 import MissionsComponent from '../../components/missionsComponent'
+import CONSTANTS from '../../constants/Missions/constants'
 
 const Missions = () => {
     return (
         <Grid sx={{ ...missionsStyles.main }}>
-            <Card item sx={{ width: '100%', borderRadius: '10px', boxShadow: 'none', height: '12.4%' }}>
+            <Card item sx={{ ...missionsStyles.headerImage }}>
                 <Image src={ICONS.featuredQuest} width={1789} height={244} />
             </Card>
-            <Box>
-                <MissionsComponent/>
-            </Box>
+            <Grid sx={{...missionsStyles.missionsComponentRepeat}} >
+                {CONSTANTS.missionComponentRepeat.map(()=><MissionsComponent />)}                
+            </Grid>
         </Grid>
     )
 }

@@ -104,6 +104,7 @@ const headerStyles = {
         justifyContent: 'space-between',
         alignItems: 'center',
         gap: 2,
+        marginRight: '40px'
     },
     sideButton: {
         container: true,
@@ -122,6 +123,16 @@ const headerStyles = {
         fontWeight: 700,
         lineHeight: '160%',
         color: headerTheme.palette.white,
+    },
+    avatar: {
+        position: 'absolute',
+        top: '18px'
+    },
+    avatarStatus: {
+        position: 'absolute',
+        zIndex: '5',
+        right: '40px',
+        top: '48px'
     }
 
 };

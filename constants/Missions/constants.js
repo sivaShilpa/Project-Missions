@@ -1,16 +1,16 @@
 import ICONS from "../../components/icons/icons"
 
 const CONSTANTS = {
-    cardHeaderButtons : [
-        'Backend', 
-        'Beginner', 
+    cardHeaderButtons: [
+        'Backend',
+        'Beginner',
         '2 hrs'
-    ], 
-    cardTopContent : [
+    ],
+    cardTopContent: [
         {
             icon: ICONS.coinicon,
             value: '$12000',
-            text: 'prize pool', 
+            text: 'prize pool',
             borderColor: 'var(--gradients-gradient-yellow, #FACC15)'
         },
         {
@@ -21,7 +21,7 @@ const CONSTANTS = {
         },
         {
             icon: ICONS.diamondicon,
-            value: 500, 
+            value: 500,
             text: 'entry fee',
             borderColor: 'var(--gradients-gradient-blue, #246BFD)'
         }
@@ -39,7 +39,17 @@ const CONSTANTS = {
             number: '24',
             text: 'Minutes'
         }
-    ]
+    ],
+    footerCharacters: [
+        ICONS.character1,
+        ICONS.character2,
+        ICONS.character3,
+        ICONS.character4,
+        ICONS.character5,
+        ICONS.character6
+    ],
+    marginLeft: [-290, -180, -70, 40, 150, 260], 
+    missionComponentRepeat: [0, 1, 2]
 }
 
 export default CONSTANTS

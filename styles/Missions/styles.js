@@ -15,14 +15,20 @@ const missionsStyles = {
     card: {
         marginTop: '3%',
         borderRadius: '23px',
-        width: '30%',
-        height: '1000px',
+        width: '31%',
+        height: '825px',
         borderRight: '8px solid',
         borderBottom: '8px solid',
         borderColor: missionsTheme.palette.cardBorder,
         background: '#181A20',
         zIndex: '5',
         container: true,
+    },
+    headerImage:{
+        width: '100%', 
+        borderRadius: '10px',
+        boxShadow: 'none', 
+        height: '12.4%'
     },
     header: {
         display: 'flex',
@@ -80,7 +86,7 @@ const missionsStyles = {
     },
     content: {
         container: true,
-        padding: '16px 24px',
+        padding: '16px 5px',
         display: 'flex',
         flexDirection: 'column',
         textAlign: 'center',
@@ -101,7 +107,7 @@ const missionsStyles = {
         justifyContent: 'center',
         alignItems: 'center',
         container: true,
-        item: true, 
+        item: true,
     },
     topContentButton: {
         display: 'flex',
@@ -144,7 +150,7 @@ const missionsStyles = {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: '3%',
+        marginLeft: '17px',
         width: '93%',
         borderRadius: '20px',
         border: '1px solid var(--dark-dark-4, #35383F)'
@@ -177,20 +183,20 @@ const missionsStyles = {
         margin: 0,
         container: true,
         item: true
-    }, 
-    bottomNumber:{
-        borderRadius: '4px', 
-        border: '1px solid var(--gradients-gradient-red, #FF5A5F)' ,
-        padding:'5px 35px', 
-        fontSize:'45px', 
-        fontFamily:'monospace', 
-        margin:0, 
-        fontStyle: 'normal', 
-        fontWeight:400, 
-        lineHeight:'normal', 
+    },
+    bottomNumber: {
+        borderRadius: '4px',
+        border: '1px solid var(--gradients-gradient-red, #FF5A5F)',
+        padding: '5px 35px',
+        fontSize: '45px',
+        fontFamily: 'monospace',
+        margin: 0,
+        fontStyle: 'normal',
+        fontWeight: 400,
+        lineHeight: 'normal',
         background: 'var(--gradients-gradient-red, linear-gradient(286deg, #FF5A5F 0%, #FF8A9B 100%))',
-        backgroundClip: 'text', 
-        WebkitBackgroundClip: 'text', 
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         item: true
     },
@@ -224,6 +230,48 @@ const missionsStyles = {
         lineHeight: '140%',
         letterSpacing: '0.2px',
         textTransform: 'capitalize'
+    },
+    footerButton: {
+        display: 'flex',
+        padding: '4px 12px',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '6px',
+        flex: '1 0 0',
+        alignSelf: 'stretch',
+        borderRadius: '40px',
+        border: '2px solid var(--dark-dark-3, #262A35)',
+        background: 'var(--dark-dark-1, #181A20)',
+        margin: '16px 20px',
+        color: 'var(--others-white, #FFF)',
+        textAlign: 'center',
+        fontSize: '18px',
+        fontStyle: 'normal',
+        fontWeight: '700',
+        lineHeight: '160%',
+        textTransform: 'capitalize'
+    },
+    footerCharacter: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        container: true,
+        marginTop: '51px',
+        padding: '0 32px'
+    },
+    footerImage: {
+        position: 'absolute',
+        marginTop: '10'
+    }, 
+    missionsComponentRepeat: {
+        container: true, 
+        item: true, 
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        gap: '60px',
     }
+
 }
 export default missionsStyles

@@ -1,8 +1,7 @@
 import React from 'react'
-import { Button, Card, Grid, Typography, Box, Divider } from '@mui/material'
+import { Button, Card, Grid, Divider } from '@mui/material'
 import Image from 'next/image'
 import ICONS from '../icons/icons'
-import missionsTheme from '../../themes/Missions/theme'
 import missionsStyles from '../../styles/Missions/styles'
 import CONSTANTS from '../../constants/Missions/constants'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -10,7 +9,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const MissionsComponent = () => {
     return (
         <Card sx={{ ...missionsStyles.card }}>
-            <Image alt="Card Header Image" src={ICONS.cardHeader} height='180px' width={537} />
+            <Image alt="Card Header Image" src={ICONS.cardHeader} height='180px' width={550} />
             <Grid sx={{ ...missionsStyles.header }}>
                 <Grid item container sx={{ width: '75px' }}>
                     <Image alt="Blue Icon" src={ICONS.blueIcon} />
@@ -38,18 +37,26 @@ const MissionsComponent = () => {
                 </Grid>
                 <Grid sx={{ ...missionsStyles.bottomContent }}>
                     <Grid sx={{ ...missionsStyles.bottomTitle }}>ends in</Grid>
-                    <Grid sx={{...missionsStyles.contentNumberContainer}}>
-                        {CONSTANTS.cardContentButtons.map(el=><Grid sx={{...missionsStyles.bottomNumberText}}>
-                            <Grid sx={{...missionsStyles.bottomNumber}}>{el.number}</Grid>
-                            <Grid sx={{...missionsStyles.bottomText}}>{el.text}</Grid>
+                    <Grid sx={{ ...missionsStyles.contentNumberContainer }}>
+                        {CONSTANTS.cardContentButtons.map(el => <Grid sx={{ ...missionsStyles.bottomNumberText }}>
+                            <Grid sx={{ ...missionsStyles.bottomNumber }}>{el.number}</Grid>
+                            <Grid sx={{ ...missionsStyles.bottomText }}>{el.text}</Grid>
                         </Grid>)}
                     </Grid>
-                    <Grid container item sx={{padding: '16px'}}>
-                        <Button sx={{...missionsStyles.startNowButton}}>Start Now <ArrowForwardIcon/> </Button>
+                    <Grid container item sx={{ padding: '16px' }}>
+                        <Button sx={{ ...missionsStyles.startNowButton }}>Start Now <ArrowForwardIcon /> </Button>
                     </Grid>
                 </Grid>
             </Grid>
             <Divider sx={{ backgroundColor: '#35383F' }} />
+            <Grid container>
+                <Button sx={{ ...missionsStyles.footerButton }}> View Current Leaderboard {ICONS.trophyicon} </Button>
+            </Grid>
+            <Grid sx={{ ...missionsStyles.footerCharacter }}>
+                {CONSTANTS.footerCharacters.map((el, index) =>
+                    <Image src={el} alt='character' style={{ ...missionsStyles.footerImage, marginLeft: CONSTANTS.marginLeft[index] }} />
+                )}
+            </Grid>
         </Card>
     )
 }
