@@ -16,7 +16,7 @@ const missionsStyles = {
         marginTop: '3%',
         borderRadius: '23px',
         width: '31%',
-        height: '825px',
+        height: '832px',
         borderRight: '8px solid',
         borderBottom: '8px solid',
         borderColor: missionsTheme.palette.cardBorder,
@@ -262,7 +262,8 @@ const missionsStyles = {
     },
     footerImage: {
         position: 'absolute',
-        marginTop: '10'
+        // marginTop: '10',
+        // marginBottom: '50'
     }, 
     missionsComponentRepeat: {
         container: true, 
