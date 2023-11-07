@@ -1,11 +1,11 @@
 import '../styles/globals.css'
-import Header from '../templates/Header'
+import { AppLayout } from './layouts/AppLayout'
 
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Header />
+      <AppLayout />
       <Component {...pageProps} />
     </>
   )

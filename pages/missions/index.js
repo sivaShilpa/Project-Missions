@@ -1,20 +1,21 @@
-import { Box, Card, CardMedia, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import missionsStyles from '../../styles/Missions/styles'
-import ICONS from '../../components/icons/icons'
+import ICONS from '../../constants/icons'
 import MissionsComponent from '../../components/missionsComponent'
-import CONSTANTS from '../../constants/Missions/constants'
+import MISSIONSCONSTANTS from '../../constants/MissionsConstants'
 
 const Missions = () => {
     return (
         <Grid sx={{ ...missionsStyles.main }}>
-            <Card item sx={{ ...missionsStyles.headerImage }}>
-                <Image src={ICONS.featuredQuest} width={1789} height={244} />
-            </Card>
-            <Grid sx={{...missionsStyles.missionsComponentRepeat}} >
-                {CONSTANTS.missionComponentRepeat.map(()=><MissionsComponent />)}                
+
+            <Image src={ICONS.featuredQuest} width={1789} height='100%' />
+
+            <Grid sx={{ ...missionsStyles.missionsComponentRepeat }} >
+                {MISSIONSCONSTANTS.missionComponentRepeat.map(() => <MissionsComponent />)}
             </Grid>
+
         </Grid>
     )
 }

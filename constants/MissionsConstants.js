@@ -1,6 +1,6 @@
-import ICONS from "../../components/icons/icons"
+import ICONS from "./icons"
 
-const CONSTANTS = {
+const MISSIONSCONSTANTS = {
     cardHeaderButtons: [
         'Backend',
         'Beginner',
@@ -52,4 +52,4 @@ const CONSTANTS = {
     missionComponentRepeat: [0, 1, 2]
 }
 
-export default CONSTANTS
+export default MISSIONSCONSTANTS

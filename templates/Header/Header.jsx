@@ -1,14 +1,28 @@
-
 import React from 'react'
 import { AppBar, Grid, Link, Box } from '@mui/material'
 import Image from 'next/image'
 import NavBarLink from './NavBarLink'
 import SideButton from './SideButton/SideButton'
 import headerStyles from '../../styles/Header/styles'
-import ICONS from '../../components/icons/icons'
-import CONSTANTS from '../../constants/Header/constants'
-import ROUTES from '../../routes/routes'
+import ICONS from '../../constants/icons'
+import ROUTES from '../../constants/routes'
 import Avatar from './Avatar/Avatar'
+import headerTheme from '../../themes/Header/theme'
+
+const buttons = [
+    {
+      icon: ICONS.diamondicon,
+      number: '20,000',
+      background: headerTheme.palette.diamondsBackground,
+      borderColor: headerTheme.palette.diamondsBorder
+    },
+    {
+      icon: ICONS.coinicon,
+      number: '11,000',
+      background: headerTheme.palette.coinsBackground,
+      borderColor: headerTheme.palette.coinsBorder
+    }
+  ]
 
 const Header = () => {
     return (
@@ -20,12 +34,12 @@ const Header = () => {
                     </Link>
                 </Grid>
                 <Grid sx={{ ...headerStyles.navBarStyles }}>
-                    {CONSTANTS.navbarPages.map(el =>
+                    {ROUTES.navbarPages.map(el =>
                         <NavBarLink {...el} />
                     )}
                 </Grid>
                 <Box sx={{ ...headerStyles.sideBar }}>
-                    {CONSTANTS.buttons.map(el =>
+                    {buttons.map(el =>
                         <SideButton {...el} />
                     )}
                     <Avatar />

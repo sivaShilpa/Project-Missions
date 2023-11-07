@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button, Card, Grid, Divider } from '@mui/material'
 import Image from 'next/image'
-import ICONS from '../icons/icons'
+import ICONS from '../../constants/icons'
 import missionsStyles from '../../styles/Missions/styles'
-import CONSTANTS from '../../constants/Missions/constants'
+import MISSIONSCONSTANTS from '../../constants/MissionsConstants'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const MissionsComponent = () => {
@@ -19,14 +19,16 @@ const MissionsComponent = () => {
                         Search
                     </Grid>
                     <Grid sx={{ ...missionsStyles.headerButtonsContainer }}>
-                        {CONSTANTS.cardHeaderButtons.map(el => <Grid item sx={{ ...missionsStyles.headerButton }}>{el}</Grid>)}
+                        {MISSIONSCONSTANTS.cardHeaderButtons.map(el =>
+                            <Grid item sx={{ ...missionsStyles.headerButton }}>{el}</Grid>
+                        )}
                     </Grid>
                 </Grid>
             </Grid>
             <Divider sx={{ backgroundColor: '#35383F' }} />
             <Grid sx={{ ...missionsStyles.content }}>
                 <Grid sx={{ ...missionsStyles.cardTopContent }}>
-                    {CONSTANTS.cardTopContent.map(el => <Grid sx={{ ...missionsStyles.topContentContainer }}>
+                    {MISSIONSCONSTANTS.cardTopContent.map(el => <Grid sx={{ ...missionsStyles.topContentContainer }}>
                         <Grid sx={{ ...missionsStyles.topContentButton, borderColor: el.borderColor }}>
                             {el.text == 'players' ? <Image src={el.icon} alt="icon" /> :
                                 <Image src={el.icon} alt="icon" width={20} height={20} />}
@@ -38,7 +40,7 @@ const MissionsComponent = () => {
                 <Grid sx={{ ...missionsStyles.bottomContent }}>
                     <Grid sx={{ ...missionsStyles.bottomTitle }}>ends in</Grid>
                     <Grid sx={{ ...missionsStyles.contentNumberContainer }}>
-                        {CONSTANTS.cardContentButtons.map(el => <Grid sx={{ ...missionsStyles.bottomNumberText }}>
+                        {MISSIONSCONSTANTS.cardContentButtons.map(el => <Grid sx={{ ...missionsStyles.bottomNumberText }}>
                             <Grid sx={{ ...missionsStyles.bottomNumber }}>{el.number}</Grid>
                             <Grid sx={{ ...missionsStyles.bottomText }}>{el.text}</Grid>
                         </Grid>)}
@@ -53,8 +55,8 @@ const MissionsComponent = () => {
                 <Button sx={{ ...missionsStyles.footerButton }}> View Current Leaderboard {ICONS.trophyicon} </Button>
             </Grid>
             <Grid sx={{ ...missionsStyles.footerCharacter }}>
-                {CONSTANTS.footerCharacters.map((el, index) =>
-                    <Image src={el} alt='character' style={{ ...missionsStyles.footerImage, marginLeft: CONSTANTS.marginLeft[index] }} />
+                {MISSIONSCONSTANTS.footerCharacters.map((el, index) =>
+                    <Image src={el} alt='character' style={{ ...missionsStyles.footerImage, marginLeft: MISSIONSCONSTANTS.marginLeft[index] }} />
                 )}
             </Grid>
         </Card>

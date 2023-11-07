@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const SideButton = ({ icon, number, background, borderColor }) => {
   return (
-    <Box sx={{ ...headerStyles.sideButton, background: background, borderColor: borderColor }}>
+    <Box sx={{ ...headerStyles.sideButton(background, borderColor) }}>
       <Image src={icon} alt="icon" />
       <Box>{number}</Box>
     </Box>

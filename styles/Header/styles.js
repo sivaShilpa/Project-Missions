@@ -12,7 +12,6 @@ const headerStyles = {
         width: '23%',
         height: '84px'
     },
-
     appbarStyles: {
         position: 'sticky',
         justifyContent: 'center',
@@ -106,24 +105,28 @@ const headerStyles = {
         gap: 2,
         marginRight: '40px'
     },
-    sideButton: {
-        container: true,
-        item: true,
-        xs: 'auto',
-        display: 'flex',
-        padding: '2px 16px',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        gap: '8px',
-        borderRadius: '40px',
-        border: '2px solid',
-        height: '36px',
-        fontSize: '20px',
-        fontStyle: 'normal',
-        fontWeight: 700,
-        lineHeight: '160%',
-        color: headerTheme.palette.white,
-    },
+    sideButton: (background, borderColor)=>(
+        {
+            container: true,
+            item: true,
+            xs: 'auto',
+            display: 'flex',
+            padding: '2px 16px',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: '8px',
+            borderRadius: '40px',
+            border: '2px solid',
+            height: '36px',
+            fontSize: '20px',
+            fontStyle: 'normal',
+            fontWeight: 700,
+            lineHeight: '160%',
+            color: headerTheme.palette.white,
+            background: background, 
+            borderColor: borderColor
+        }
+    ),
     avatar: {
         position: 'absolute',
         top: '18px'
