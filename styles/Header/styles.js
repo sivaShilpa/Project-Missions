@@ -9,8 +9,12 @@ const headerStyles = {
         flexDirection: 'row',
         alignItems: 'left',
         justifyContent: 'space-around',
-        width: '23%',
-        height: '84px'
+        height: '84px',
+        gap: {
+           xl: '24px',
+           lg: '16px', 
+           md: '16px',
+        }
     },
     appbarStyles: {
         position: 'sticky',
@@ -39,10 +43,20 @@ const headerStyles = {
     navBarText: {
         color: headerTheme.palette.secondary,
         textDecoration: 'none',
-        fontSize: '20px',
+        fontSize: {
+            xl: '20px',
+            lg: '18px', 
+            md: '16px',
+            sm: '14px'
+        },
         fontStyle: 'normal',
         fontWeight: 700,
-        paddingTop: '28px',
+        paddingTop: {
+            xl: '28px',
+            lg: '30px', 
+            md: '32px',
+            sm: '34px'
+        },
     },
     linkTextWrap: {
         height: '84px',
@@ -118,7 +132,12 @@ const headerStyles = {
             borderRadius: '40px',
             border: '2px solid',
             height: '36px',
-            fontSize: '20px',
+            fontSize: {
+                xl: '20px',
+                lg: '18px', 
+                md: '16px',
+                sm: '14px'
+            },
             fontStyle: 'normal',
             fontWeight: 700,
             lineHeight: '160%',

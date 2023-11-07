@@ -13,6 +13,7 @@ import character3 from '../assets/Character3.png'
 import character4 from '../assets/Character4.png'
 import character5 from '../assets/Character5.png'
 import character6 from '../assets/Character6.png'
+import homeLogoSmall from '../assets/homeLogoSmall.png'
 
 const ICONS = {
   homeLogo: homeLogo,
@@ -32,7 +33,8 @@ const ICONS = {
   character3: character3,
   character4: character4, 
   character5: character5, 
-  character6: character6
+  character6: character6, 
+  homeLogoSmall: homeLogoSmall
 }
 export default ICONS
 
