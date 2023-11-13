@@ -10,7 +10,7 @@ const missionsTheme = {
         startNowButtonBorder: 'var(--gradients-gradient-purple, #6949FF)',
         startNowButtonBackground: 'var(--gradients-purples, linear-gradient(286deg, #6335F8 0%, #E71DE7 100%))',
         white: 'var(--others-white, #FFF)',
-        footerButtomBorder: 'var(--dark-dark-3, #262A35)',
+        footerButtonBorder: 'var(--dark-dark-3, #262A35)',
         footerButtonBackground: 'var(--dark-dark-1, #181A20)',
         
     }

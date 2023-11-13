@@ -1,162 +1,201 @@
 import headerTheme from "../../themes/Header/theme";
 
 const headerStyles = {
-    navBarStyles: {
-        item: true,
-        container: true,
-        xs: 'auto',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'left',
-        justifyContent: 'space-around',
-        height: '84px',
-        gap: {
-           xl: '24px',
-           lg: '16px', 
-           md: '16px',
-        }
+  navBarStyles: {
+    item: true,
+    container: true,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "left",
+    justifyContent: "space-around",
+    height: "84px",
+    gap: {
+      xl: "24px",
+      lg: "16px",
+      md: "16px",
+      sm: "16px",
     },
-    appbarStyles: {
-        position: 'sticky',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: headerTheme.palette.primary,
-        boxShadow: 'none',
-        height: '85px',
-        padding: '0 40px',
+  },
+  appbarGridContainer: {
+    position: "sticky",
+    backgroundColor: headerTheme.palette.primary,
+    height: "85px",
+    paddingLeft: { xl: 4, lg: 4, md: 3, sm: 2, xs: 1 },
+    paddingRight: 10,
+    container: true,
+    xs: 12,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  navbarItem: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+  },
+  navBarText: {
+    color: headerTheme.palette.secondary,
+    textDecoration: "none",
+    fontSize: {
+      xl: "20px",
+      lg: "18px",
+      md: "16px",
+      sm: "14px",
     },
-    appbarGridContainer: {
-        container: true,
-        width: '100%',
-        height: '84px',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+    fontStyle: "normal",
+    fontWeight: 700,
+    paddingTop: {
+      xl: "28px",
+      lg: "30px",
+      md: "32px",
+      sm: "34px",
     },
-    navbarItem: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        position: 'relative'
+  },
+  linkTextWrap: {
+    height: "84px",
+    justifyContent: "space-between",
+    alignItems: "left",
+    display: "flex",
+    flexDirection: "column",
+    "#linkTextLine": {
+      width: "110%",
+      height: "4px",
+      flexShrink: "0",
+      borderRadius: "2px 2px 0px 0px",
+      background: headerTheme.palette.primary,
     },
-    navBarText: {
-        color: headerTheme.palette.secondary,
-        textDecoration: 'none',
-        fontSize: {
-            xl: '20px',
-            lg: '18px', 
-            md: '16px',
-            sm: '14px'
-        },
-        fontStyle: 'normal',
-        fontWeight: 700,
-        paddingTop: {
-            xl: '28px',
-            lg: '30px', 
-            md: '32px',
-            sm: '34px'
-        },
+    ":hover": {
+      "#linkText": {
+        background: headerTheme.palette.highlight,
+        backgrounClip: "text",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+      },
+      "#linkTextLine": {
+        background: headerTheme.palette.highlight,
+      },
     },
-    linkTextWrap: {
-        height: '84px',
-        justifyContent: 'space-between',
-        alignItems: 'left',
-        display: 'flex',
-        flexDirection: 'column',
-        '#linkTextLine': {
-            width: '110%',
-            height: '4px',
-            flexShrink: '0',
-            borderRadius: '2px 2px 0px 0px',
-            background: headerTheme.palette.primary,
-        },
-        ':hover': {
-            '#linkText': {
-                background: headerTheme.palette.highlight,
-                backgrounClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-            },
-            '#linkTextLine': {
-                background: headerTheme.palette.highlight
-            }
-        }
+  },
+  linkTextWrapActive: {
+    justifyContent: "space-between",
+    alignItems: "left",
+    display: "flex",
+    flexDirection: "column",
+    "#linkText": {
+      textDecoration: "none",
+      fontSize: {
+        xl: "20px",
+        lg: "18px",
+        md: "16px",
+        sm: "14px",
+        xs: "14px",
+      },
+      fontStyle: "normal",
+      fontWeight: 700,
+      marginBottom: {
+        xl: "0px",
+        lg: "10px",
+        md: "10px",
+        sm: "10px",
+        xs: "10px",
+      },
+      background: headerTheme.palette.highlight,
+      backgrounClip: "text",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
     },
-    linkTextWrapActive: {
-        height: '84px',
-        justifyContent: 'space-between',
-        alignItems: 'left',
-        display: 'flex',
-        flexDirection: 'column',
-        '#linkText': {
-            textDecoration: 'none',
-            fontSize: '20px',
-            fontStyle: 'normal',
-            fontWeight: 700,
-            paddingTop: '28px',
-            background: headerTheme.palette.highlight,
-            backgrounClip: 'text',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-        },
-        '#linkTextLine': {
-            width: '110%',
-            height: '4px',
-            flexShrink: '0',
-            borderRadius: '2px 2px 0px 0px',
-            background: headerTheme.palette.highlight
-        }
+    "#linkTextLine": {
+      width: "110%",
+      height: "4px",
+      flexShrink: "0",
+      borderRadius: "2px 2px 0px 0px",
+      background: headerTheme.palette.highlight,
     },
-    sideBar: {
-        item: true,
-        container: true,
-        xs: 'auto',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        gap: 2,
-        marginRight: '40px'
+    gap: {
+      xl: "24px",
+      lg: "16px",
+      md: "16px",
+      sm: "18px",
     },
-    sideButton: (background, borderColor)=>(
-        {
-            container: true,
-            item: true,
-            xs: 'auto',
-            display: 'flex',
-            padding: '2px 16px',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: '8px',
-            borderRadius: '40px',
-            border: '2px solid',
-            height: '36px',
-            fontSize: {
-                xl: '20px',
-                lg: '18px', 
-                md: '16px',
-                sm: '14px'
-            },
-            fontStyle: 'normal',
-            fontWeight: 700,
-            lineHeight: '160%',
-            color: headerTheme.palette.white,
-            background: background, 
-            borderColor: borderColor
-        }
-    ),
-    avatar: {
-        position: 'absolute',
-        top: '18px'
+  },
+  sideBar: {
+    item: true,
+    container: true,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    width: { xl: "315px", lg: "270px", md: "270px", sm: "200px", xs: "135px" },
+    gap: { xl: 2, lg: 2, md: 2, sm: 1, xs: 0 },
+  },
+  sideButton: (background, borderColor) => ({
+    container: true,
+    item: true,
+    xs: "auto",
+    display: "flex",
+    padding: "2px 16px",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: { sm: "8px", xs: "1.5px" },
+    borderRadius: "40px",
+    border: "2px solid",
+    height: "36px",
+    fontSize: {
+      xl: "20px",
+      lg: "18px",
+      md: "16px",
+      sm: "14px",
     },
-    avatarStatus: {
-        position: 'absolute',
-        zIndex: '5',
-        right: '40px',
-        top: '48px'
-    }
-
+    fontStyle: "normal",
+    fontWeight: 700,
+    lineHeight: "160%",
+    color: headerTheme.palette.white,
+    background: background,
+    borderColor: borderColor,
+    width: { xl: "141px", lg: "120px", md: "120px", sm: "92px", xs: "80px" },
+  }),
+  avatar: {
+    position: "absolute",
+    top: "18px",
+    right: { xl: "35px", lg: "35px", md: "35px", sm: "30px", xs: "10px" },
+  },
+  avatarStatus: {
+    position: "absolute",
+    zIndex: "5",
+    right: { xl: "40px", lg: "40px", md: "40px", sm: "35px", xs: "15px" },
+    top: "48px",
+  },
+  dropDownStyle: {
+    border: "1px solid #00F5A0",
+    borderRadius: "100px",
+    backgroundColor: headerTheme.palette.primary,
+    display: "flex",
+    height: "36px",
+    width: "200px",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "8px",
+    fieldset: {
+      border: "none !important",
+      outline: "none !important",
+    },
+    textAlign: "center",
+    fontSize: "14px",
+    fontStyle: "normal",
+    fontWeight: "700",
+    lineHeight: "140%",
+    letterSpacing: "0.2px",
+    "& .MuiPaper-root": {
+      backgroundColor: headerTheme.palette.primary,
+    },
+  },
+  dropDownText: {
+    background: headerTheme.palette.highlight,
+    backgrounClip: "text",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  },
 };
 
 export default headerStyles;

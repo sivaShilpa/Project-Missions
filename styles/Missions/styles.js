@@ -14,7 +14,7 @@ const missionsStyles = {
         marginTop: '55px',
         borderRadius: '23px',
         width: '31%',
-        height: '832px',
+        height: '847px',
         borderRight: '8px solid',
         borderBottom: '8px solid',
         borderColor: missionsTheme.palette.cardBorder,
