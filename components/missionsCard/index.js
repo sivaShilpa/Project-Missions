@@ -2,11 +2,11 @@ import React from 'react'
 import { Button, Card, Grid, Divider } from '@mui/material'
 import Image from 'next/image'
 import ICONS from '../../constants/icons'
-import missionsStyles from '../../styles/Missions/styles'
+import missionsStyles from '../../styles/missions'
 import MISSIONSCONSTANTS from '../../constants/MissionsConstants'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-const MissionsComponent = () => {
+const MissionsCard = () => {
     return (
         <Card sx={{ ...missionsStyles.card }}>
             <Image alt="Card Header Image" src={ICONS.cardHeader} height='180px' width={550} />
@@ -56,11 +56,13 @@ const MissionsComponent = () => {
             </Grid>
             <Grid sx={{ ...missionsStyles.footerCharacter }}>
                 {MISSIONSCONSTANTS.footerCharacters.map((el, index) =>
-                    <Image src={el} alt='character' style={{ ...missionsStyles.footerImage, marginLeft: MISSIONSCONSTANTS.marginLeft[index] }} />
+                    <Grid item sx={{position: 'absolute', left: MISSIONSCONSTANTS.marginLeft[index]}}>
+                        <Image src={el} alt='character'/>
+                    </Grid>
                 )}
             </Grid>
         </Card>
     )
 }
 
-export default MissionsComponent
+export default MissionsCard

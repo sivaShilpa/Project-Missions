@@ -1,18 +1,18 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/router";
 import { Box, Link, Typography } from "@mui/material";
-import headerStyles from "../../../styles/Header/styles";
-import { usePathname } from "next/navigation";
+import headerStyles from "../../../styles/header";
 
 const NavBarLink = ({ text, link, icon }) => {
-  const pathname = usePathname();
+  const { route } = useRouter();
   return (
     <Box sx={{ ...headerStyles.navbarItem }}>
       <Box>{icon}</Box>
       <Box
-        id="text"
+        id={text}
         sx={
-          pathname == link
+          route == link
             ? { ...headerStyles.linkTextWrapActive }
             : { ...headerStyles.linkTextWrap }
         }
