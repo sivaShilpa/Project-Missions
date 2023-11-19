@@ -1,7 +1,7 @@
 import { Grid, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import missionsStyles from "../../styles/missions";
+import missionsStyles from "../../styles/missionsStyles";
 import ICONS from "../../constants/icons";
 import MissionsCard from "../../components/missionsCard";
 import MISSIONSCONSTANTS from "../../constants/missions";

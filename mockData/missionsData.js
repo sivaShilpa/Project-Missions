@@ -1,3 +1,6 @@
+import ICONS from "../constants/icons";
+import theme from "../themes/theme";
+
 const MissionsData = {
   cardHeaderButtons: ["Backend", "Beginner", "2 hrs"],
   cardTopContent: [
@@ -5,7 +8,7 @@ const MissionsData = {
       icon: ICONS.coinicon,
       value: "$12000",
       text: "prize pool",
-      borderColor: "var(--gradients-gradient-yellow, #FACC15)",
+      borderColor: (theme)=> theme.missionsTheme.topContentButtonCoin,
     },
     {
       icon: ICONS.groupicon,

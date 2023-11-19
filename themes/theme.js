@@ -26,6 +26,9 @@ const theme = createTheme({
     white: "var(--others-white, #FFF)",
     footerButtonBorder: "var(--dark-dark-3, #262A35)",
     footerButtonBackground: "var(--dark-dark-1, #181A20)",
+    topContentButtonCoin: "var(--gradients-gradient-yellow, #FACC15)", 
+    topContentButtonGroup: 'var(--gradients-gradient-red, #FF5A5F)', 
+    topContentButtonDiamond: 'var(--gradients-gradient-blue, #246BFD)'
   },
   breakpoints: {
     values: {

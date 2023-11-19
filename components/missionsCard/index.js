@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Card, Grid, Divider } from "@mui/material";
 import Image from "next/image";
 import ICONS from "../../constants/icons";
-import missionsStyles from "../../styles/missions";
+import missionsStyles from "../../styles/missionsStyles";
 import MISSIONSCONSTANTS from "../../constants/missions";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import MissionsData from "../../mockData/missionsData";
@@ -36,10 +36,7 @@ const MissionsCard = () => {
         <Grid {...missionsStyles.cardTopContent}>
           {MissionsData.cardTopContent.map((el) => (
             <Grid {...missionsStyles.topContentContainer}>
-              <Grid
-                {...missionsStyles.topContentButton}
-                sx={{ borderColor: el.borderColor }}
-              >
+              <Grid {...missionsStyles.topContentButton(el.borderColor)}>
                 {el.text == "players" ? (
                   <Image src={el.icon} alt="icon" />
                 ) : (

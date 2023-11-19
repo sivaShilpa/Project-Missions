@@ -136,11 +136,12 @@ const missionsStyles = {
       item: true,
     },
   },
-  topContentButton: {
+  topContentButton: (borderColor)=>({
     sx: {
       display: "flex",
       flexDirection: "row",
       border: "2px solid",
+      borderColor: borderColor,
       justifyContent: "center",
       alignItems: "center",
       gap: "4px",
@@ -151,7 +152,7 @@ const missionsStyles = {
       container: true,
       item: true,
     },
-  },
+  }), 
   topButtonValue: {
     sx: {
       color: (theme) => theme.missionsTheme.font,
