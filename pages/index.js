@@ -1,13 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Header from '../templates/Header'
+import { Box } from "@mui/material";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head> 
-        <Header/>
-      </Head>
-    </div>
-  )
+  return <Box className={styles.container}>Home</Box>;
 }
