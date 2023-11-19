@@ -7,7 +7,7 @@ import headerStyles from "../../../styles/header";
 const NavBarLink = ({ text, link, icon }) => {
   const { route } = useRouter();
   return (
-    <Box sx={{ ...headerStyles.navbarItem }}>
+    <Box {...headerStyles.navbarItem}>
       <Box>{icon}</Box>
       <Box
         id={text}
@@ -18,7 +18,7 @@ const NavBarLink = ({ text, link, icon }) => {
         }
       >
         <Link href={link} sx={{ textDecoration: "none" }}>
-          <Typography id="linkText" sx={{ ...headerStyles.navBarText }}>
+          <Typography id="linkText" {...headerStyles.navBarText}>
             {text}
           </Typography>
         </Link>

@@ -15,15 +15,7 @@ const DropdownMenu = () => {
       id="dropdown"
       placeholder="Select a Page"
       IconComponent={() => (
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "50px",
-            height: "30px",
-          }}
-        >
+        <Box {...headerStyles.dropDownIndicator}>
           <Image src={ICONS.arrowDown} alt="arrowDown" />
         </Box>
       )}
@@ -55,7 +47,7 @@ const DropdownMenu = () => {
           </MenuItem>
         )
       }
-      sx={{ ...headerStyles.dropDownStyle }}
+      {...headerStyles.dropDownStyle}
       MenuProps={{
         variant: "menu",
         PaperProps: {
@@ -65,16 +57,16 @@ const DropdownMenu = () => {
         },
       }}
     >
-      <MenuItem value="select" sx={{margin:0}}>
+      <MenuItem value="select" sx={{ margin: 0 }}>
         <Box {...headerStyles.dropDownText}>Select a page</Box>
       </MenuItem>
-      <Link href="/missions" sx={{ textDecoration: "none", margin: 0}}>
+      <Link href="/missions" sx={{ textDecoration: "none", margin: 0 }}>
         <MenuItem value="missions" gap={10}>
           <Box component="span">{ICONS.rocketicon}</Box>
           <Box {...headerStyles.dropDownText}>Missions</Box>
         </MenuItem>
       </Link>
-      <Link href="/leaderboard" sx={{ textDecoration: "none", margin: 0}}>
+      <Link href="/leaderboard" sx={{ textDecoration: "none", margin: 0 }}>
         <MenuItem value="leaderboard" gap={10}>
           <Box component="span">{ICONS.trophyicon}</Box>
           <Box component="span" {...headerStyles.dropDownText}>

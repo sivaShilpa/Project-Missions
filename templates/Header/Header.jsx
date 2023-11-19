@@ -14,14 +14,14 @@ const BUTTONS = [
   {
     icon: ICONS.diamondicon,
     number: "20,000",
-    numberSmall: '20K', 
+    numberSmall: "20K",
     background: theme.headerTheme.diamondsBackground,
     borderColor: theme.headerTheme.diamondsBorder,
   },
   {
     icon: ICONS.coinicon,
     number: "11,000",
-    numberSmall: '11K',
+    numberSmall: "11K",
     background: theme.headerTheme.coinsBackground,
     borderColor: theme.headerTheme.coinsBorder,
   },
@@ -29,23 +29,11 @@ const BUTTONS = [
 
 const Header = () => {
   const isMdScreen = useMediaQuery("(max-width: 1024px)");
-  const isSmScreen = useMediaQuery("(max-width: 768px)"); 
-  
+  const isSmScreen = useMediaQuery("(max-width: 768px)");
+
   return isSmScreen ? (
-    <Grid sx={{ ...headerStyles.appbarGridContainer }}>
-      <Grid
-        item
-        container
-        xs="auto"
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          textAlign: "center",
-          justifyContent: "space-between",
-          width: { md: "260px", sm: "200px", xs: "150px" },
-        }}
-      >
+    <Grid {...headerStyles.appbarGridContainer}>
+      <Grid {...headerStyles.homeLogo}>
         <Link href={ROUTES.HOME}>
           <Image
             src={ICONS.homeLogoSmall}
@@ -57,15 +45,14 @@ const Header = () => {
         <DropdownMenu />
       </Grid>
 
-      <Box sx={{ ...headerStyles.sideBar }}>
+      <Box {...headerStyles.sideBar}>
         <SideButton {...BUTTONS[0]} />
         <SideButton {...BUTTONS[1]} />
         <Avatar />
       </Box>
-      
     </Grid>
   ) : (
-    <Grid sx={{ ...headerStyles.appbarGridContainer }}>
+    <Grid {...headerStyles.appbarGridContainer}>
       <Grid item xs="auto">
         <Link href={ROUTES.HOME}>
           {isMdScreen ? (
@@ -80,14 +67,14 @@ const Header = () => {
           )}
         </Link>
       </Grid>
-      <Grid sx={{ ...headerStyles.navBarStyles }} xs={4}>
+      <Grid {...headerStyles.navBarStyles}>
         {ROUTES.navbarPages.map((el) => (
           <NavBarLink {...el} />
         ))}
       </Grid>
-      <Grid sx={{ ...headerStyles.sideBar }} xs="auto">        
+      <Grid {...headerStyles.sideBar}>
         <SideButton {...BUTTONS[0]} />
-        <SideButton {...BUTTONS[1]} />         
+        <SideButton {...BUTTONS[1]} />
         <Avatar />
       </Grid>
     </Grid>
