@@ -1,5 +1,3 @@
-import theme from "../themes/theme";
-
 const missionsStyles = {
   main: {
     sx: {

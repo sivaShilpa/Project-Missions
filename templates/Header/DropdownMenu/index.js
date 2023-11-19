@@ -1,11 +1,10 @@
 import React from "react";
 import { Select, Box, MenuItem, Link } from "@mui/material";
-import headerStyles from "../../../styles/header";
+import headerStyles from "../../../styles/headerStyles";
 import ICONS from "../../../constants/icons";
 import theme from "../../../themes/theme";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import makeStyles from "@mui/styles";
 
 const DropdownMenu = () => {
   const { route } = useRouter();

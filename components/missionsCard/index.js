@@ -3,8 +3,9 @@ import { Button, Card, Grid, Divider } from "@mui/material";
 import Image from "next/image";
 import ICONS from "../../constants/icons";
 import missionsStyles from "../../styles/missions";
-import MISSIONSCONSTANTS from "../../constants/MissionsConstants";
+import MISSIONSCONSTANTS from "../../constants/missions";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import MissionsData from "../../mockData/missionsData";
 
 const MissionsCard = () => {
   return (
@@ -22,7 +23,7 @@ const MissionsCard = () => {
         <Grid {...missionsStyles.headerContent}>
           <Grid {...missionsStyles.headerTitle}>Search</Grid>
           <Grid {...missionsStyles.headerButtonsContainer}>
-            {MISSIONSCONSTANTS.cardHeaderButtons.map((el) => (
+            {MissionsData.cardHeaderButtons.map((el) => (
               <Grid item {...missionsStyles.headerButton}>
                 {el}
               </Grid>
@@ -33,7 +34,7 @@ const MissionsCard = () => {
       <Divider sx={{ backgroundColor: "#35383F" }} />
       <Grid {...missionsStyles.content}>
         <Grid {...missionsStyles.cardTopContent}>
-          {MISSIONSCONSTANTS.cardTopContent.map((el) => (
+          {MissionsData.cardTopContent.map((el) => (
             <Grid {...missionsStyles.topContentContainer}>
               <Grid
                 {...missionsStyles.topContentButton}
@@ -53,7 +54,7 @@ const MissionsCard = () => {
         <Grid {...missionsStyles.bottomContent}>
           <Grid {...missionsStyles.bottomTitle}>ends in</Grid>
           <Grid {...missionsStyles.contentNumberContainer}>
-            {MISSIONSCONSTANTS.cardContentButtons.map((el) => (
+            {MissionsData.cardContentButtons.map((el) => (
               <Grid {...missionsStyles.bottomNumberText}>
                 <Grid {...missionsStyles.bottomNumber}>{el.number}</Grid>
                 <Grid {...missionsStyles.bottomText}>{el.text}</Grid>

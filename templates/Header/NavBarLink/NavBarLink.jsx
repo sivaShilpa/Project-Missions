@@ -2,7 +2,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { Box, Link, Typography } from "@mui/material";
-import headerStyles from "../../../styles/header";
+import headerStyles from "../../../styles/headerStyles";
 
 const NavBarLink = ({ text, link, icon }) => {
   const { route } = useRouter();

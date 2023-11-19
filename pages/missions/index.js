@@ -4,7 +4,7 @@ import React from "react";
 import missionsStyles from "../../styles/missions";
 import ICONS from "../../constants/icons";
 import MissionsCard from "../../components/missionsCard";
-import MISSIONSCONSTANTS from "../../constants/MissionsConstants";
+import MISSIONSCONSTANTS from "../../constants/missions";
 
 const Missions = () => {
   const isSmScreen = useMediaQuery("(max-width: 1024px)");

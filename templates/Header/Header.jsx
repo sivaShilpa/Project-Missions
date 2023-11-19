@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Grid, Link, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import NavBarLink from "./NavBarLink";
 import SideButton from "./SideButton/SideButton";
-import headerStyles from "../../styles/header";
+import headerStyles from "../../styles/headerStyles";
 import ICONS from "../../constants/icons";
 import ROUTES from "../../constants/routes";
 import Avatar from "./Avatar/Avatar";
@@ -24,6 +24,24 @@ const BUTTONS = [
     numberSmall: "11K",
     background: theme.headerTheme.coinsBackground,
     borderColor: theme.headerTheme.coinsBorder,
+  },
+];
+
+const NavbarPages = [
+  {
+    text: "Missions",
+    link: "/missions",
+    icon: ICONS.rocketicon,
+  },
+  {
+    text: "Leaderboard",
+    link: "/leaderboard",
+    icon: ICONS.trophyicon,
+  },
+  {
+    text: "Rewards",
+    link: "/rewards",
+    icon: ICONS.rewardsicon,
   },
 ];
 
@@ -68,7 +86,7 @@ const Header = () => {
         </Link>
       </Grid>
       <Grid {...headerStyles.navBarStyles}>
-        {ROUTES.navbarPages.map((el) => (
+        {NavbarPages.map((el) => (
           <NavBarLink {...el} />
         ))}
       </Grid>

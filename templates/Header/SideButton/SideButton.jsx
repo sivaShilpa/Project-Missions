@@ -1,6 +1,6 @@
 import { Box, Grid, useMediaQuery } from "@mui/material";
 import React from "react";
-import headerStyles from "../../../styles/header";
+import headerStyles from "../../../styles/headerStyles";
 import Image from "next/image";
 
 const SideButton = ({ icon, number, numberSmall, background, borderColor }) => {

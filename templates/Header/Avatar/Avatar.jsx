@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import ICONS from "../../../constants/icons";
 import Image from "next/image";
-import headerStyles from "../../../styles/header";
+import headerStyles from "../../../styles/headerStyles";
 
 const Avatar = () => {
   return (
